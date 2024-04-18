@@ -1,0 +1,128 @@
+* {
+  font-family: "JetBrains Mono";
+}
+
+$main-background: #dcdcdc;
+
+.show {
+  transform: rotate(180deg);
+  transition: 0.1s ease-in-out 0.1s;
+}
+
+.container {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .controller-box {
+    background-color: $main-background;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding-inline: 16px;
+
+      .active {
+        background-color: #e4f3ff;
+        border-radius: 4px;
+      }
+
+      .def {
+        background-color: transparent;
+      }
+    }
+
+    .deleteAll {
+      background-color: transparent;
+    }
+
+    button {
+      &:hover {
+        font-weight: bold;
+        color: #00a7ff;
+      }
+      color: #1a1a1a;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 520px;
+
+    button {
+      height: 100%;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $main-background;
+      border-radius: 0;
+      outline: none;
+      box-shadow: none;
+      border: none;
+
+      svg {
+        width: 32px;
+        height: 32px;
+        transition: 0.1s ease-in-out 0.1s;
+      }
+
+      &:hover, &:focus, &:active {
+        border: none;
+        background-color: $main-background;
+        border-radius: 0;
+        outline: none;
+        box-shadow: none;
+      }
+
+      &:hover {
+        background-color: #b7cae0;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: #00a7ff;
+      }
+    }
+
+     .label-input {
+       width: 450px;
+       height: 60px;
+
+       input {
+         border: 0;
+         background-color: $main-background;
+         color: #1a1a1a;
+         width: 100%;
+         height: 100%;
+         font-size: 18px;
+         padding: 0 0 0 10px;
+
+         &:hover, &:focus, &:active {
+           border: none;
+           background-color: $main-background;
+           border-radius: 0;
+           outline: none;
+           box-shadow: none;
+         }
+
+         &:hover {
+           background-color: #ffffff;
+           cursor: text;
+         }
+       }
+     }
+  }
+}
