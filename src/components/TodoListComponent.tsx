@@ -25,13 +25,13 @@ function TodoListComponent({show, allTodos, setTodos, filter}: TodoListComponent
 	};
 
 	const handleRemove = (id: number) => {
-		const newTodos:ITodo[] = filteredTodos().filter((todo: ITodo) => todo.id !== id);
+		const newTodos:ITodo[] = allTodos.filter((todo: ITodo) => todo.id !== id);
 		setTodos(newTodos);
 		localStorage.setItem('todos', JSON.stringify(newTodos));
 	}
 
 	const handleSetStatus = (id:number) => {
-		const newTodos = filteredTodos().map((todo: ITodo) => {
+		const newTodos = allTodos.map((todo: ITodo) => {
 			if (todo.id === id) {
 				return { ...todo, status: todo.status === 'open' ? 'closed' : 'open' };
 			}
